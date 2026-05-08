@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="img/Logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jorge Montes — Desarrollador de Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -283,15 +282,6 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1.4rem;
     }
-    .pcard-horizontal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-}
-.pcard-horizontal .pcard-thumb {
-  height: 100%;
-  min-height: 220px;
-}
     .pcard {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -434,6 +424,7 @@
     footer span { color: var(--blue-light); }
 
     /* ── RESPONSIVE ─────────────────────────────── */
+    /* ── TABLET (768px) ─────────────────────────── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
@@ -446,6 +437,97 @@
       .hstat + .hstat { border-left: none; padding-left: 0; padding-top: 1.5rem; border-top: 1px solid rgba(79,163,232,0.12); }
       .feat-header { padding: 1.5rem; }
       .gallery-section { padding: 1.2rem 1rem 1.5rem; }
+      .pcard-horizontal { grid-template-columns: 1fr; }
+      .pcard-horizontal .pcard-thumb { min-height: 200px; }
+    }
+
+    /* ── MOBILE (480px) ─────────────────────────── */
+    @media (max-width: 480px) {
+
+      /* NAV */
+      nav { padding: 0.9rem 1.2rem; }
+      .nav-logo { font-size: 1rem; }
+
+      /* HERO */
+      #hero { padding: 7rem 0 3rem; min-height: auto; }
+      .hero-eyebrow { font-size: 0.65rem; padding: 0.3rem 0.8rem; }
+      .hero-name { font-size: 3.2rem; line-height: 0.9; }
+      .hero-tagline { font-size: 0.9rem; margin-top: 1.2rem; }
+      .hero-chips { gap: 0.4rem; margin-top: 1.4rem; }
+      .chip { font-size: 0.62rem; padding: 0.22rem 0.6rem; }
+      .hero-actions { flex-direction: column; gap: 0.8rem; margin-top: 2rem; }
+      .btn { width: 100%; justify-content: center; padding: 0.9rem 1.5rem; font-size: 0.85rem; }
+      .hero-stats { margin-top: 3rem; flex-wrap: wrap; }
+      .hstat { flex: 1 1 45%; padding: 0.8rem 0; }
+      .hstat-n { font-size: 1.6rem; }
+      .hstat-l { font-size: 0.7rem; }
+
+      /* SECTIONS */
+      section { padding: 4rem 0; }
+      .s-label { font-size: 0.65rem; }
+      .s-title { font-size: 1.7rem; margin-bottom: 2rem; }
+
+      /* FEATURED APP CARD */
+      .featured-card { border-radius: 12px; }
+      .feat-header { padding: 1.2rem; flex-direction: column; }
+      .feat-badge { font-size: 0.6rem; }
+      .feat-title { font-size: 1.4rem; }
+      .feat-desc { font-size: 0.82rem; }
+      .feat-tags { gap: 0.35rem; }
+      .feat-tags .chip { font-size: 0.6rem; }
+      .gallery-section { padding: 1rem 0.8rem 1.2rem; }
+      .g-label { font-size: 0.62rem; }
+      .shot { width: 260px; }
+      .shot-cap { font-size: 0.58rem; padding: 0.35rem 0.6rem; }
+      .g-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+      .g-grid .shot { width: auto; }
+
+      /* PROJECT CARDS */
+      .projects-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .pcard-horizontal { grid-template-columns: 1fr; }
+      .pcard-horizontal .pcard-thumb { min-height: 180px; }
+      .pcard-body { padding: 1.1rem; }
+      .pcard-type { font-size: 0.6rem; }
+      .pcard-title { font-size: 1rem; }
+      .pcard-desc { font-size: 0.8rem; }
+      .stag { font-size: 0.58rem; }
+
+      /* ABOUT */
+      .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-text p { font-size: 0.88rem; }
+      .world-strip { padding: 1rem; }
+      .world-cities { gap: 0.4rem; }
+      .city-tag { font-size: 0.72rem; }
+      .tl-item { grid-template-columns: 72px 1fr; gap: 0.8rem; }
+      .tl-item::before { left: 65px; }
+      .tl-year { font-size: 0.62rem; padding-right: 1rem; }
+      .tl-title { font-size: 0.85rem; }
+      .tl-sub { font-size: 0.72rem; }
+
+      /* CONTACT */
+      .contact-card { border-radius: 12px; }
+      .contact-header { padding: 1.4rem; }
+      .contact-header div[style] { font-size: 1.1rem !important; }
+      .contact-header p { font-size: 0.82rem; }
+      .ci { padding: 0.9rem 1.4rem; gap: 0.9rem; }
+      .ci-icon { width: 34px; height: 34px; font-size: 0.9rem; }
+      .ci-lbl { font-size: 0.6rem; }
+      .ci-val { font-size: 0.82rem; }
+
+      /* LIGHTBOX */
+      #lb img { max-width: 96vw; max-height: 85vh; }
+      #lb-x { top: 1rem; right: 1rem; font-size: 1.6rem; }
+
+      /* FOOTER */
+      footer { font-size: 0.62rem; padding: 1.5rem 1rem; }
+    }
+
+    /* ── VERY SMALL (360px) ─────────────────────── */
+    @media (max-width: 360px) {
+      .hero-name { font-size: 2.6rem; }
+      .g-grid { grid-template-columns: 1fr; }
+      .hstat { flex: 1 1 100%; }
+      .hstat + .hstat { border-left: none; }
     }
   </style>
 </head>
@@ -629,47 +711,43 @@
     </div>
 
     <!-- 2×2 GRID OTHER PROJECTS -->
-    <div class="pcard pcard-horizontal reveal reveal-d1">
-  
-  <!-- IMAGEN PRIMERO IZQUIERDA -->
-  <div class="pcard-thumb" style="padding:0;overflow:hidden;">
-    <img src="img/techcompare_thumb.png" 
-         style="width:100%;height:100%;object-fit:cover;object-position:left">
-    <span class="p-status st-live">● Live</span>
-  </div>
+    <div class="projects-grid">
 
-  <!-- TEXTO SEGUNDO  DERECHA -->
-  <div class="pcard-body">
-    <div class="pcard-type">// Plataforma Web · Equipo · Scrum</div>
-    <div class="pcard-title">TechCompare</div>
-    <p class="pcard-desc">Comparador de precios y catálogo de tecnología...</p>
-    <div class="pcard-stack">
-      <span class="stag">HTML</span><span class="stag">CSS</span>
-      <span class="stag">JavaScript</span><span class="stag">Scrum</span>
-    </div>
-    <a href="https://scrum242424.vercel.app" target="_blank" class="pcard-link">Ver proyecto -> </a>
-  </div>
+      <div class="pcard reveal reveal-d1">
+        <div class="pcard-thumb">
+          <span class="icon">🛒</span>
+          <span>TechCompare</span>
+          <span class="p-status st-live">● Live</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-type">// Plataforma Web · Equipo · Scrum</div>
+          <div class="pcard-title">TechCompare</div>
+          <p class="pcard-desc">Comparador de precios y catálogo de tecnología. Lo construimos en equipo aplicando Scrum de principio a fin — sprints, backlog, retrospectivas. Está vivo en Vercel.</p>
+          <div class="pcard-stack">
+            <span class="stag">HTML</span><span class="stag">CSS</span>
+            <span class="stag">JavaScript</span><span class="stag">Scrum</span><span class="stag">Vercel</span>
+          </div>
+          <a href="https://scrum242424.vercel.app" target="_blank" class="pcard-link">Ver proyecto →</a>
+        </div>
+      </div>
 
-</div>
-
-<div class="pcard pcard-horizontal reveal reveal-d2">
-  <div class="pcard-body">
-    <div class="pcard-type">// Frontend · Freelance · Vanilla JS</div>
-    <div class="pcard-title">Lectores Apasionados & Aquelarre</div>
-    <p class="pcard-desc">Sitio editorial completo: arquitectura CSS modular, canvas HTML5 con fondo estelar animado, SVGs personalizados, sistema de traducciones i18n y catálogo dinámico — todo sin frameworks.</p>
-    <div class="pcard-stack">
-      <span class="stag">HTML5</span><span class="stag">CSS Modular</span>
-      <span class="stag">JavaScript</span><span class="stag">Canvas API</span>
-      <span class="stag">SVG</span><span class="stag">i18n</span>
-    </div>
-    <a href="https://lectores-apasionados.vercel.app/" target="_blank" class="pcard-link">Ver proyecto -> </a>
-  </div>
-  <div class="pcard-thumb" style="padding:0;overflow:hidden;">
-    <img src="img/lectores_thumb.png" 
-         style="width:100%;height:100%;object-fit:cover;object-position:left;">
-    <span class="p-status st-client">◈ Cliente Real</span>
-  </div>
-</div>
+      <div class="pcard reveal reveal-d2">
+        <div class="pcard-thumb">
+          <span class="icon">📚</span>
+          <span>Blog Literario</span>
+          <span class="p-status st-client">◈ Cliente Real</span>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-type">// Frontend · Freelance · Vanilla JS</div>
+          <div class="pcard-title">Lectores Apasionados & Aquelarre</div>
+          <p class="pcard-desc">Sitio editorial completo: arquitectura CSS modular, canvas HTML5 con fondo estelar animado, SVGs personalizados, sistema de traducciones i18n y catálogo dinámico — todo sin frameworks.</p>
+          <div class="pcard-stack">
+            <span class="stag">HTML5</span><span class="stag">CSS Modular</span>
+            <span class="stag">JavaScript</span><span class="stag">Canvas API</span>
+            <span class="stag">SVG</span><span class="stag">i18n</span>
+          </div>
+          <span class="pcard-link off">Link próximamente</span>
+        </div>
       </div>
 
     </div>
@@ -789,7 +867,7 @@
         <p>Si tienes un proyecto interesante, un equipo con ganas de crecer, o simplemente quieres conocerme — escríbeme. Respondo.</p>
       </div>
       <div class="ci-list">
-        <a class="ci" href="https://mail.google.com/mail/?view=cm&to=jorgiis19@gmail.com" target="_blank">
+        <a class="ci" href="mailto:jorgiis19@gmail.com">
           <div class="ci-icon">✉</div>
           <div><div class="ci-lbl">Email</div><div class="ci-val">jorgiis19@gmail.com</div></div>
         </a>
@@ -800,6 +878,10 @@
         <div class="ci" style="cursor:default;">
           <div class="ci-icon">📍</div>
           <div><div class="ci-lbl">Base</div><div class="ci-val">Bogotá, Colombia — abierto al mundo</div></div>
+        </div>
+        <div class="ci" style="cursor:default;">
+          <div class="ci-icon">🌐</div>
+          <div><div class="ci-lbl">Portafolio</div><div class="ci-val" style="color:var(--muted);font-size:0.8rem;">[ reemplaza con tu link de Vercel ]</div></div>
         </div>
       </div>
     </div>
