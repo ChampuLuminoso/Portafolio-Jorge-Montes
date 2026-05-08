@@ -128,7 +128,6 @@
     .shot img { width: 100%; display: block; }
     .shot-cap { padding: 0.45rem 0.75rem; background: rgba(0,0,0,0.5); font-family: var(--font-mono); font-size: 0.6rem; color: var(--sky); }
 
-<<<<<<< HEAD
     /* PROJECT CARDS — 2 column grid */
     .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
 
@@ -142,41 +141,6 @@
     .pcard-thumb { aspect-ratio: 16/9; background: var(--ink2); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); position: relative; overflow: hidden; }
     .pcard-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 0.4s; }
     .pcard:hover .pcard-thumb img { transform: scale(1.04); }
-=======
-    /* PROJECT GRID 2×2 */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.4rem;
-    }
-    .pcard-horizontal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-}
-.pcard-horizontal .pcard-thumb {
-  height: 100%;
-  min-height: 220px;
-}
-    .pcard {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius); overflow: hidden;
-      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-    }
-    .pcard:hover {
-      transform: translateY(-6px);
-      border-color: rgba(79,163,232,0.35);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.35);
-    }
-    .pcard-thumb {
-      aspect-ratio: 16/9; background: var(--ink2);
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; gap: 0.5rem;
-      font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted);
-      position: relative; overflow: hidden;
-    }
->>>>>>> parent of 957d07b (Responsive portafolio)
     .pcard-thumb .icon { font-size: 2.2rem; opacity: 0.35; }
     .p-status { position: absolute; font-family: var(--font-mono); font-size: 0.6rem; padding: 0.18rem 0.55rem; border-radius: 20px; letter-spacing: 0.08em; }
     .st-live { background: rgba(79,163,232,0.18); color: var(--blue-light); border: 1px solid rgba(79,163,232,0.35); }
@@ -243,13 +207,9 @@
     footer { text-align: center; padding: 2.5rem; font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); border-top: 1px solid rgba(79,163,232,0.08); position: relative; z-index: 1; }
     footer span { color: var(--blue-light); }
 
-<<<<<<< HEAD
     /* ════════════════════════════════════════════
        RESPONSIVE — TABLET (768px)
     ════════════════════════════════════════════ */
-=======
-    /* ── RESPONSIVE ─────────────────────────────── */
->>>>>>> parent of 957d07b (Responsive portafolio)
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
@@ -264,7 +224,6 @@
       .hstat + .hstat { border-left: none; padding-left: 0; padding-top: 1.5rem; border-top: 1px solid rgba(79,163,232,0.12); }
       .feat-header { padding: 1.5rem; }
       .gallery-section { padding: 1.2rem 1rem 1.5rem; }
-<<<<<<< HEAD
     }
 
     /* ════════════════════════════════════════════
@@ -345,8 +304,6 @@
       .g-grid { grid-template-columns: 1fr; }
       .hstat { flex: 1 1 100%; }
       .hstat + .hstat { border-left: none; }
-=======
->>>>>>> parent of 957d07b (Responsive portafolio)
     }
   </style>
 </head>
@@ -461,7 +418,6 @@
       </div>
     </div>
 
-<<<<<<< HEAD
     <!-- TECHCOMPARE — imagen izquierda, texto derecha -->
     <div class="projects-grid" style="margin-bottom:1.4rem;">
       <div class="pcard pcard-h reveal reveal-d1" style="grid-column: 1 / -1;">
@@ -500,50 +456,6 @@
           <img src="img/lectores_thumb.png" alt="Lectores Apasionados">
           <span class="p-status st-client" style="bottom:10px;left:10px;top:auto;right:auto;">◈ Cliente Real</span>
         </div>
-=======
-    <!-- 2×2 GRID OTHER PROJECTS -->
-    <div class="pcard pcard-horizontal reveal reveal-d1">
-  
-  <!-- IMAGEN PRIMERO IZQUIERDA -->
-  <div class="pcard-thumb" style="padding:0;overflow:hidden;">
-    <img src="img/techcompare_thumb.png" 
-         style="width:100%;height:100%;object-fit:cover;object-position:left">
-    <span class="p-status st-live">● Live</span>
-  </div>
-
-  <!-- TEXTO SEGUNDO  DERECHA -->
-  <div class="pcard-body">
-    <div class="pcard-type">// Plataforma Web · Equipo · Scrum</div>
-    <div class="pcard-title">TechCompare</div>
-    <p class="pcard-desc">Comparador de precios y catálogo de tecnología...</p>
-    <div class="pcard-stack">
-      <span class="stag">HTML</span><span class="stag">CSS</span>
-      <span class="stag">JavaScript</span><span class="stag">Scrum</span>
-    </div>
-    <a href="https://scrum242424.vercel.app" target="_blank" class="pcard-link">Ver proyecto -> </a>
-  </div>
-
-</div>
-
-<div class="pcard pcard-horizontal reveal reveal-d2">
-  <div class="pcard-body">
-    <div class="pcard-type">// Frontend · Freelance · Vanilla JS</div>
-    <div class="pcard-title">Lectores Apasionados & Aquelarre</div>
-    <p class="pcard-desc">Sitio editorial completo: arquitectura CSS modular, canvas HTML5 con fondo estelar animado, SVGs personalizados, sistema de traducciones i18n y catálogo dinámico — todo sin frameworks.</p>
-    <div class="pcard-stack">
-      <span class="stag">HTML5</span><span class="stag">CSS Modular</span>
-      <span class="stag">JavaScript</span><span class="stag">Canvas API</span>
-      <span class="stag">SVG</span><span class="stag">i18n</span>
-    </div>
-    <a href="https://lectores-apasionados.vercel.app/" target="_blank" class="pcard-link">Ver proyecto -> </a>
-  </div>
-  <div class="pcard-thumb" style="padding:0;overflow:hidden;">
-    <img src="img/lectores_thumb.png" 
-         style="width:100%;height:100%;object-fit:cover;object-position:left;">
-    <span class="p-status st-client">◈ Cliente Real</span>
-  </div>
-</div>
->>>>>>> parent of 957d07b (Responsive portafolio)
       </div>
     </div>
 
@@ -620,23 +532,13 @@
       </div>
       <div class="ci-list">
         <a class="ci" href="https://mail.google.com/mail/?view=cm&to=jorgiis19@gmail.com" target="_blank">
-<<<<<<< HEAD
           <div class="ci-icon">✉</div><div><div class="ci-lbl">Email</div><div class="ci-val">jorgiis19@gmail.com</div></div>
-=======
-          <div class="ci-icon">✉</div>
-          <div><div class="ci-lbl">Email</div><div class="ci-val">jorgiis19@gmail.com</div></div>
->>>>>>> parent of 957d07b (Responsive portafolio)
         </a>
         <a class="ci" href="tel:+573053105618">
           <div class="ci-icon">📱</div><div><div class="ci-lbl">Teléfono / WhatsApp</div><div class="ci-val">+57 305 310 5618</div></div>
         </a>
         <div class="ci" style="cursor:default;">
-<<<<<<< HEAD
           <div class="ci-icon">📍</div><div><div class="ci-lbl">Base</div><div class="ci-val">Bogotá, Colombia — abierto al mundo</div></div>
-=======
-          <div class="ci-icon">📍</div>
-          <div><div class="ci-lbl">Base</div><div class="ci-val">Bogotá, Colombia — abierto al mundo</div></div>
->>>>>>> parent of 957d07b (Responsive portafolio)
         </div>
       </div>
     </div>
